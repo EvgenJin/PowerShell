@@ -1,4 +1,5 @@
-﻿$pathtomonitor = "C:\tmp"
+﻿# триггер на изменение файлов в папке
+$pathtomonitor = "C:\tmp"
 $timeout = -1
 
 $FileSystemWatcher = New-Object System.IO.FileSystemWatcher $pathtomonitor

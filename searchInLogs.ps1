@@ -1,4 +1,5 @@
-﻿Do {
+﻿#  grep по логам в каталоге
+Do {
   # Write-Host "Где искать?  => " -ForegroundColor Green -NoNewline
   $folder = '\\10.26.232.39\log4j'
   Write-Host "Что искать?  => " -ForegroundColor Green -NoNewline

@@ -1,4 +1,5 @@
-﻿Do {
+﻿# менюшка для очистки ОЗУ
+Do {
   # всего памяти
   $os = Get-Ciminstance Win32_OperatingSystem
   # свободная память / всего 

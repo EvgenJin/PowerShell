@@ -1,4 +1,5 @@
-﻿$Word = New-Object -ComObject Word.Application
+﻿# поиск в файле с регуляркой
+$Word = New-Object -ComObject Word.Application
 $Document = $Word.Documents.Open('Q:\BankXXI\TEMPLATE.WORD\kred_dog\2014\Ипотека\ЗАКЛАДНЫЕ\20.04.2017\ЗАКЛАДНАЯ_СОЗАЕМ1_2_3_КВАРТ.dot')
 $range = $Document.content
 
