@@ -12,16 +12,12 @@ function getmatch {
   return $res
 }
 
-#$a = Get-ChildItem -Path $folder -recurse | Where-Object -FilterScript {($_.LastWriteTime -gt (get-date).AddDays(-25))}
 foreach ($line in $csv) {
     $file = Get-ChildItem -Path $folder -recurse | Where-Object -FilterScript {($_.LastWriteTime.ToString("dd.MM.yyyy") -eq $line.dat)}
     $content = Get-Content $file.FullName -Encoding UTF8 | Select-String $line.id.ToString()
     if ($content){
-      #$content.Tostring()
-      # $content.Tostring() -match '(?<= IDB=")(\S+?)(?=")'
-      # $m = $matches
       $m = getmatch -a $content
       $m = $m -replace "True","" 
-      Write-Host $line.id';'$m 
+      Write-Host $line.id';'$m
     }
 }
